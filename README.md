@@ -34,10 +34,10 @@ CSV → Extractor (Python) → Postgres (staging table) → dbt (transforms) →
 <img width="885" height="495" alt="image" src="https://github.com/user-attachments/assets/74a83a91-9bc0-4596-ab9a-38fcdb7b292b" />
 
 ## Requirements:
-Docker desktop 
-- Set up WSL integration (for Ubuntu Cron Jobs)
-Python 3.10+
-Ubuntu (for scheduling with for cron)
+- [Docker desktop](https://docs.docker.com/desktop/setup/install/windows-install/) 
+  - For Windows: Set up WS integration (for Ubuntu Cron Jobs)
+- [Python 3.10+] (https://www.python.org/downloads/)
+- For Windows: [Ubuntu](https://ubuntu.com/download/desktop) (for scheduling with for cron)
 
 ## Setup Instructions
 ### 1. Clone the respository
