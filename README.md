@@ -93,8 +93,10 @@ A bash script is created to run the pipeline automatically every day at 12:00 am
 
 **Note:** For Windows Os, Cron jobs must run in Ubuntu. 
 - Download Ubuntu
-- Activate the environment in your terminal 
-
+- Activate the environment in your terminal
+  ``` bash
+  wsl.exe -d Ubuntu  -- launch ubuntu
+  ```
 Ensure WSL integration is enbaled in Docker Desktop:
 
 Docker Desktop - Settings - Resources 
