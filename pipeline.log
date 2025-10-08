@@ -1,0 +1,145 @@
+/mnt/c/Users/Bluechip/CDE/ETL_PIPELINE/run_pipeline.sh: line 4: docker-compose: command not found
+/mnt/c/Users/Bluechip/CDE/ETL_PIPELINE/run_pipeline.sh: line 5: docker-compose: command not found
+/mnt/c/Users/Bluechip/CDE/ETL_PIPELINE/run_pipeline.sh: line 6: docker-compose: command not found
+Pulling latest image
+docker: unknown command: docker compose
+
+Run 'docker --help' for more information
+Starting pipeline
+Starting postgres_db ... 
+Starting postgres_db ... done
+Starting etl_pipeline_pgadmin_1 ... 
+Starting etl_pipeline_pgadmin_1 ... done
+Starting extractor              ... 
+Starting extractor              ... done
+Starting dbt                    ... 
+Starting dbt                    ... done
+Attaching to postgres_db, etl_pipeline_pgadmin_1, extractor, dbt
+[33mpgadmin_1    |[0m postfix/postlog: starting the Postfix mail system
+[33mpgadmin_1    |[0m /venv/lib/python3.12/site-packages/passlib/pwd.py:16: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[33mpgadmin_1    |[0m   import pkg_resources
+[33mpgadmin_1    |[0m /venv/lib/python3.12/site-packages/passlib/pwd.py:16: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[33mpgadmin_1    |[0m   import pkg_resources
+[32mextractor    |[0m 2025-10-08 00:19:14,000 [INFO] Extract and load job started
+[32mextractor    |[0m 2025-10-08 00:19:37,014 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+[32mextractor    |[0m 0    536365    85123A  ...    17850.0  United Kingdom
+[32mextractor    |[0m 1    536365     71053  ...    17850.0  United Kingdom
+[32mextractor    |[0m 2    536365    84406B  ...    17850.0  United Kingdom
+[32mextractor    |[0m 3    536365    84029G  ...    17850.0  United Kingdom
+[32mextractor    |[0m 4    536365    84029E  ...    17850.0  United Kingdom
+[32mextractor    |[0m 
+[32mextractor    |[0m [5 rows x 8 columns]
+[32mextractor    |[0m 2025-10-08 00:19:37,031 [INFO] Connecting to database....
+[32mextractor    |[0m 2025-10-08 00:21:10,415 [INFO] Data successfully loaded into bankole_store
+[32mextractor    |[0m 2025-10-08 00:21:10,416 [INFO] Extract and load job completed successfully
+[33mpgadmin_1    |[0m [2025-10-08 00:19:44 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[33mpgadmin_1    |[0m [2025-10-08 00:19:44 +0000] [1] [INFO] Listening at: http://[::]:80 (1)
+[33mpgadmin_1    |[0m [2025-10-08 00:19:44 +0000] [1] [INFO] Using worker: gthread
+[33mpgadmin_1    |[0m [2025-10-08 00:19:45 +0000] [83] [INFO] Booting worker with pid: 83
+[33mpgadmin_1    |[0m ::ffff:172.18.0.1 - - [08/Oct/2025:00:20:18 +0000] "GET /dashboard/dashboard_stats/1/16384?chart_names=session_stats,tps_stats,ti_stats,to_stats,bio_stats HTTP/1.1" 401 127 "http://localhost:8091/browser/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[32mextractor exited with code 0
+[0mStopping dbt                    ... 
+Stopping etl_pipeline_pgadmin_1 ... 
+Stopping postgres_db            ... 
+Stopping etl_pipeline_pgadmin_1 ... done
+Stopping postgres_db            ... done
+Stopping dbt                    ... done
+Aborting on container exit...
+Pipeline finished
+Removing dbt                    ... 
+Removing extractor              ... 
+Removing etl_pipeline_pgadmin_1 ... 
+Removing postgres_db            ... 
+Removing postgres_db            ... done
+Removing extractor              ... done
+Removing etl_pipeline_pgadmin_1 ... done
+Removing dbt                    ... done
+Removing network etl_pipeline_default
+Pulling latest image
+Pulling postgres  ... 
+Pulling pgadmin   ... 
+Pulling extractor ... 
+Pulling dbt       ... 
+Pulling dbt       ... pulling from choiceugwuede/dbt
+Pulling pgadmin   ... pulling from dpage/pgadmin4
+Pulling dbt       ... digest: sha256:2d3f982a405e3e84f2...
+Pulling dbt       ... status: image is up to date for c...
+Pulling dbt       ... done
+Pulling postgres  ... pulling from library/postgres
+Pulling pgadmin   ... digest: sha256:d115bcd737940a6cfb...
+Pulling pgadmin   ... status: image is up to date for d...
+Pulling pgadmin   ... done
+Pulling postgres  ... digest: sha256:c189d272e4fcdd1ac4...
+Pulling postgres  ... status: image is up to date for p...
+Pulling postgres  ... done
+Pulling extractor ... pulling from choiceugwuede/extrac...
+Pulling extractor ... digest: sha256:ee38db69c137fbc978...
+Pulling extractor ... status: image is up to date for c...
+Pulling extractor ... done
+Starting pipeline
+Creating network "etl_pipeline_default" with the default driver
+Creating postgres_db ... 
+Creating postgres_db ... done
+Creating etl_pipeline_pgadmin_1 ... 
+Creating etl_pipeline_pgadmin_1 ... done
+Creating extractor              ... 
+Creating extractor              ... done
+Creating dbt                    ... 
+Creating dbt                    ... done
+Attaching to postgres_db, etl_pipeline_pgadmin_1, extractor, dbt
+[33mpgadmin_1    |[0m email config is {'CHECK_EMAIL_DELIVERABILITY': False, 'ALLOW_SPECIAL_EMAIL_DOMAINS': [], 'GLOBALLY_DELIVERABLE': True}
+[33mpgadmin_1    |[0m /venv/lib/python3.12/site-packages/passlib/pwd.py:16: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[33mpgadmin_1    |[0m   import pkg_resources
+[33mpgadmin_1    |[0m NOTE: Configuring authentication for SERVER mode.
+[33mpgadmin_1    |[0m 
+[33mpgadmin_1    |[0m pgAdmin 4 - Application Initialisation
+[33mpgadmin_1    |[0m ======================================
+[33mpgadmin_1    |[0m 
+[33mpgadmin_1    |[0m postfix/postlog: starting the Postfix mail system
+[33mpgadmin_1    |[0m /venv/lib/python3.12/site-packages/passlib/pwd.py:16: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[33mpgadmin_1    |[0m   import pkg_resources
+[33mpgadmin_1    |[0m /venv/lib/python3.12/site-packages/passlib/pwd.py:16: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[33mpgadmin_1    |[0m   import pkg_resources
+[33mpgadmin_1    |[0m [2025-10-08 00:25:53 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[33mpgadmin_1    |[0m [2025-10-08 00:25:53 +0000] [1] [INFO] Listening at: http://[::]:80 (1)
+[33mpgadmin_1    |[0m [2025-10-08 00:25:53 +0000] [1] [INFO] Using worker: gthread
+[33mpgadmin_1    |[0m [2025-10-08 00:25:53 +0000] [119] [INFO] Booting worker with pid: 119
+[35mpostgres_db  |[0m 
+[35mpostgres_db  |[0m PostgreSQL Database directory appears to contain a database; Skipping initialization
+[35mpostgres_db  |[0m 
+[35mpostgres_db  |[0m 2025-10-08 00:24:11.025 UTC [1] LOG:  starting PostgreSQL 15.14 (Debian 15.14-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+[35mpostgres_db  |[0m 2025-10-08 00:24:11.026 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[35mpostgres_db  |[0m 2025-10-08 00:24:11.026 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[35mpostgres_db  |[0m 2025-10-08 00:24:11.031 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[35mpostgres_db  |[0m 2025-10-08 00:24:11.040 UTC [29] LOG:  database system was shut down at 2025-10-08 00:21:16 UTC
+[35mpostgres_db  |[0m 2025-10-08 00:24:11.050 UTC [1] LOG:  database system is ready to accept connections
+[32mextractor    |[0m 2025-10-08 00:24:20,078 [INFO] Extract and load job started
+[32mextractor    |[0m 2025-10-08 00:24:44,123 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+[32mextractor    |[0m 0    536365    85123A  ...    17850.0  United Kingdom
+[32mextractor    |[0m 1    536365     71053  ...    17850.0  United Kingdom
+[32mextractor    |[0m 2    536365    84406B  ...    17850.0  United Kingdom
+[32mextractor    |[0m 3    536365    84029G  ...    17850.0  United Kingdom
+[32mextractor    |[0m 4    536365    84029E  ...    17850.0  United Kingdom
+[32mextractor    |[0m 
+[32mextractor    |[0m [5 rows x 8 columns]
+[32mextractor    |[0m 2025-10-08 00:24:44,135 [INFO] Connecting to database....
+[32mextractor    |[0m 2025-10-08 00:25:55,746 [INFO] Data successfully loaded into bankole_store
+[32mextractor    |[0m 2025-10-08 00:25:55,754 [INFO] Extract and load job completed successfully
+[32mextractor exited with code 0
+[0mStopping dbt                    ... 
+Stopping etl_pipeline_pgadmin_1 ... 
+Stopping postgres_db            ... 
+Stopping etl_pipeline_pgadmin_1 ... done
+Stopping dbt                    ... done
+Stopping postgres_db            ... done
+Aborting on container exit...
+Pipeline finished
+Removing dbt                    ... 
+Removing extractor              ... 
+Removing etl_pipeline_pgadmin_1 ... 
+Removing postgres_db            ... 
+Removing extractor              ... done
+Removing etl_pipeline_pgadmin_1 ... done
+Removing postgres_db            ... done
+Removing dbt                    ... done
+Removing network etl_pipeline_default
