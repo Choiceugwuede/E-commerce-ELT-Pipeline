@@ -694,3 +694,67 @@ sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "bank
 2025-10-08 01:53:53,755 [INFO] Connecting to database....
 2025-10-08 01:58:36,189 [INFO] Data successfully loaded into bankole_store
 2025-10-08 01:58:36,201 [INFO] Extract and load job completed successfully
+2025-10-08 10:35:00,897 [INFO] Extract and load job started
+2025-10-08 10:42:41,942 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+0    536365    85123A  ...    17850.0  United Kingdom
+1    536365     71053  ...    17850.0  United Kingdom
+2    536365    84406B  ...    17850.0  United Kingdom
+3    536365    84029G  ...    17850.0  United Kingdom
+4    536365    84029E  ...    17850.0  United Kingdom
+[5 rows x 8 columns]
+2025-10-08 10:42:41,959 [INFO] Connecting to database....
+
+2025-10-08 11:12:55,226 [INFO] Data successfully loaded into bankole_store
+2025-10-08 11:12:55,232 [INFO] Extract and load job completed successfully
+2025-10-08 19:14:43,040 [INFO] Extract and load job started
+2025-10-08 19:15:40,497 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+0    536365    85123A  ...    17850.0  United Kingdom
+1    536365     71053  ...    17850.0  United Kingdom
+2    536365    84406B  ...    17850.0  United Kingdom
+3    536365    84029G  ...    17850.0  United Kingdom
+4    536365    84029E  ...    17850.0  United Kingdom
+
+[5 rows x 8 columns]
+2025-10-08 19:15:40,515 [INFO] Connecting to database....
+2025-10-08 19:24:41,529 [INFO] Data successfully loaded into bankole_store
+2025-10-08 19:24:41,553 [INFO] Extract and load job completed successfully
+2025-10-08 21:40:42,799 [INFO] Extract and load job started
+2025-10-08 21:41:21,588 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+0    536365    85123A  ...    17850.0  United Kingdom
+1    536365     71053  ...    17850.0  United Kingdom
+2    536365    84406B  ...    17850.0  United Kingdom
+3    536365    84029G  ...    17850.0  United Kingdom
+4    536365    84029E  ...    17850.0  United Kingdom
+
+[5 rows x 8 columns]
+2025-10-08 21:41:21,602 [INFO] Connecting to database....
+2025-10-08 21:47:13,173 [INFO] Data successfully loaded into bankole_store
+2025-10-08 21:47:13,198 [INFO] Extract and load job completed successfully
+2025-10-08 22:32:23,919 [INFO] Extract and load job started
+2025-10-08 22:33:00,059 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+0    536365    85123A  ...    17850.0  United Kingdom
+1    536365     71053  ...    17850.0  United Kingdom
+2    536365    84406B  ...    17850.0  United Kingdom
+3    536365    84029G  ...    17850.0  United Kingdom
+4    536365    84029E  ...    17850.0  United Kingdom
+
+[5 rows x 8 columns]
+2025-10-08 22:33:00,060 [INFO] Connecting to database....
+2025-10-08 22:36:25,844 [INFO] Data successfully loaded into bankole_store
+2025-10-08 22:36:25,847 [INFO] Extract and load job completed successfully
+2025-10-08 22:41:16,003 [INFO] Extract and load job started
+2025-10-08 22:41:50,681 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+0    536365    85123A  ...    17850.0  United Kingdom
+1    536365     71053  ...    17850.0  United Kingdom
+2    536365    84406B  ...    17850.0  United Kingdom
+3    536365    84029G  ...    17850.0  United Kingdom
+4    536365    84029E  ...    17850.0  United Kingdom
+
+[5 rows x 8 columns]
+2025-10-08 22:41:50,682 [INFO] Connecting to database....
+2025-10-08 22:41:54,304 [WARNING] Table bankole_store does not exist yet, skipping truncate. Details: (psycopg2.errors.UndefinedTable) relation "bankole_store" does not exist
+
+[SQL: TRUNCATE TABLE bankole_store;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-08 22:45:09,997 [INFO] Data successfully loaded into bankole_store
+2025-10-08 22:45:09,999 [INFO] Extract and load job completed successfully

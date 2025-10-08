@@ -8,4 +8,4 @@ echo "Starting pipeline"
 docker-compose up --abort-on-container-exit
 
 echo "Pipeline finished"
-docker-compose down
+docker-compose down -v
