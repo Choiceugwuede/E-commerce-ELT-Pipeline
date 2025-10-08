@@ -7166,3 +7166,13 @@ drop table if exists "staging"."bankole_store"."sales_summary__dbt_backup" casca
 [0m22:47:35.228415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f819e9f2860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f819ed315d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f819da1ec20>]}
 [0m22:47:35.291017 [debug] [MainThread]: Flushing usage events
 [0m22:47:39.472716 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:09:53.893017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4c45627a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4c32e34c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4c32e3460>]}
+
+
+============================== 23:09:53.912168 | 1b8cfc02-6634-43ad-8aea-9827dd61d076 ==============================
+[0m23:09:53.912168 [info ] [MainThread]: Running with dbt=1.10.13
+[0m23:09:53.915156 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'log_path': '/dbt/logs', 'warn_error': 'None', 'invocation_command': 'dbt run', 'log_format': 'default', 'use_colors': 'True', 'write_json': 'True', 'quiet': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'log_cache_events': 'False', 'profiles_dir': '/dbt', 'fail_fast': 'False', 'introspect': 'True', 'no_print': 'None', 'partial_parse': 'True', 'empty': 'False', 'static_parser': 'True', 'indirect_selection': 'eager'}
+[0m23:09:55.079466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1b8cfc02-6634-43ad-8aea-9827dd61d076', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4c3b37df0>]}
+[0m23:09:55.410992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1b8cfc02-6634-43ad-8aea-9827dd61d076', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4c3b07970>]}
+[0m23:09:55.415900 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:09:55.807064 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13

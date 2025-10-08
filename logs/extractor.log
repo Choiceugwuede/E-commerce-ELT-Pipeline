@@ -758,3 +758,19 @@ sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "bank
 (Background on this error at: https://sqlalche.me/e/20/f405)
 2025-10-08 22:45:09,997 [INFO] Data successfully loaded into bankole_store
 2025-10-08 22:45:09,999 [INFO] Extract and load job completed successfully
+2025-10-08 23:06:51,591 [INFO] Extract and load job started
+2025-10-08 23:07:30,937 [INFO] Extracted data:   InvoiceNo StockCode  ... CustomerID         Country
+0    536365    85123A  ...    17850.0  United Kingdom
+1    536365     71053  ...    17850.0  United Kingdom
+2    536365    84406B  ...    17850.0  United Kingdom
+3    536365    84029G  ...    17850.0  United Kingdom
+4    536365    84029E  ...    17850.0  United Kingdom
+
+[5 rows x 8 columns]
+2025-10-08 23:07:30,971 [INFO] Connecting to database....
+2025-10-08 23:07:31,575 [WARNING] Table bankole_store does not exist yet, skipping truncate. Details: (psycopg2.errors.UndefinedTable) relation "bankole_store" does not exist
+
+[SQL: TRUNCATE TABLE bankole_store;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-08 23:09:41,492 [INFO] Data successfully loaded into bankole_store
+2025-10-08 23:09:41,493 [INFO] Extract and load job completed successfully
