@@ -45,7 +45,7 @@ CSV → Extractor (Python) → Postgres (staging table) → dbt (transforms) →
 ``` bash
 bash
 
-git clone [mygitlink](https://github.com/Choiceugwuede/E-commerce-ELT-Pipeline.git)
+git clone https://github.com/Choiceugwuede/E-commerce-ELT-Pipeline.git
 cd etl_pipeline
 ```
 
