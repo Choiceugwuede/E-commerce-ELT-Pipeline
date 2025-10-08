@@ -109,7 +109,7 @@ All custom images (Extractor, dbt) are tagged and pushed to Docker Hub.
 - Pull the latest images as specified above.
 
 ### 7. Logging
-- Extractor logs: Available at and captured in the container.
+- Extractor logs: Available [here](https://github.com/Choiceugwuede/E-commerce-ELT-Pipeline/blob/main/logs/extractor.log) and captured in the container.
   <img width="777" height="242" alt="image" src="https://github.com/user-attachments/assets/2ad60d34-a052-462b-bc62-50e4d5f188cc" />
 - dbt logs: Available at and captured in the container.
 - Automated Pipeline logs : From the run_pipeline.sh script)
