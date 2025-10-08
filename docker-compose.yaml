@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: staging
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      retries: 5
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "8091:80"
+    depends_on:
+      - postgres
+  
+  extractor:
+    image: choiceugwuede/extractor:v1.o
+    container_name: extractor
+    depends_on: 
+      postgres:
+        condition: service_healthy
+    env_file: 
+      - Extract_Load/.env
+    volumes:
+    - ./Extract_Load:/Extractor
+    -  ./logs:/logs
+
+
+  dbt:
+    image: choiceugwuede/dbt:v1.o
+    container_name: dbt
+    depends_on:
+      extractor:
+        condition: service_completed_successfully
+    volumes:
+      - ./dbt_workload:/dbt
+    environment:
+      DBT_PROFILES_DIR: /dbt
+    command: ["dbt", "run"]
+    
+    
+
+volumes:
+  postgres-db-volume:

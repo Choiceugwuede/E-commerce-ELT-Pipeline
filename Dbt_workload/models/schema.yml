@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: public
+    database: staging
+    tables:
+      - name: bankole_store 
+
+
+
+
+
+
+models:
+  - name: stg_sales
+    description: "Clean the columns of sales data"
+    columns:
+      - name: invoice_no
+        description: "Primary Key for this table / Unique invoice number generated for all sales"
+        tests:
+          - unique
+          - not_null
+
+      - name: stock_code
+        description: "Unique Id of product sold"
+        tests:
+          - not_null
+
+      - name: description
+        description: "Details about stock code"
+      
+      - name: quantity
+        description: "Number of products purchased by customer"
+      
+      - name: invoice_date
+        description: :"Date of purchase"
+    
+      
+      - name: invoice_time
+        description: "Time of purchase"
+      
+      - name: unit_price
+        description: "price of product purchased"
+      
+      - name: customer_id
+        description: "Unique identifier for each customer"
+        tests:
+          - not_null
+
+      - name: country
+        description: "Country where store is located"
+
+  - name: sales_summary
+    description: "aggregation of sales in bankole store"
+    columns:
+      - name: total_sales
+        description: "total of sales per country/ invoice"
+      - name: num_invoices
+        description: "number of unique invoice"
+
+  
