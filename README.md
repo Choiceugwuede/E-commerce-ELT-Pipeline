@@ -13,7 +13,7 @@ The pipeline performs the following steps:
 
 The pipeline runs inside Docker Containers, making it portable and reproducible across environments.
 
-It is also scheduled the pipeline to run automatically every day at **12:00am** using a cron job on Ubuntu.
+It is also scheduled to run automatically every day at **12:00am** using a cron job on Ubuntu.
 
 ## Architecture
 
