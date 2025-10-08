@@ -101,7 +101,7 @@ Ensure WSL integration is enbaled in Docker Desktop:
 
 Docker Desktop - Settings - Resources 
 
-(<img width="593" height="244" alt="image" src="https://github.com/user-attachments/assets/ed6c26cb-2bf2-4761-923c-e4fe7250dcbe" />)
+<img width="593" height="244" alt="image" src="https://github.com/user-attachments/assets/ed6c26cb-2bf2-4761-923c-e4fe7250dcbe" />
 
 ### 6. Docker Hub Images
 All custom images (Extractor, dbt) are tagged and pushed to Docker Hub.
@@ -110,7 +110,7 @@ All custom images (Extractor, dbt) are tagged and pushed to Docker Hub.
 
 ### 7. Logging
 - Extractor logs: Available at and captured in the container.
-  (<img width="777" height="242" alt="image" src="https://github.com/user-attachments/assets/2ad60d34-a052-462b-bc62-50e4d5f188cc" />)
+  <img width="777" height="242" alt="image" src="https://github.com/user-attachments/assets/2ad60d34-a052-462b-bc62-50e4d5f188cc" />
 - dbt logs: Available at and captured in the container.
 - Automated Pipeline logs : From the run_pipeline.sh script)
   
