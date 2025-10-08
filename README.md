@@ -86,9 +86,9 @@ A bash script is created to run the pipeline automatically every day at 12:00 am
   ``` bash
   crontab -e
   ```
-- Add the following line( replace Ubuntu_path_to_project) with your full path):
+- Add the following line( replace /mnt/c/Users/CDE/ETL_PIPELINE) with your path):
   ```
-  0 0 * * * /bin/bash Ubuntu_path_to_project/ETL_PIPELINE/run_pipeline.sh >> Ubuntu_path_to_project/ETL_PIPELINE/pipeline.log 2>&1
+  0 0 * * * /bin/bash /mnt/c/Users/CDE/ETL_PIPELINE/ETL_PIPELINE/run_pipeline.sh >> /mnt/c/Users/CDE/ETL_PIPELINE/ETL_PIPELINE/pipeline.log 2>&1
   ```
 
 **Note:** For Windows Os, Cron jobs must run in Ubuntu. 
