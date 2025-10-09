@@ -17,12 +17,36 @@ It is also scheduled to run automatically every day at **12:00am** using a cron 
 
 ## Architecture
 
-#### Services (Containers):
-- **Postgres**: Database for business data.
-- **pgAdmin (Optional)**: UI to explore the database.
-- **Extractor**: Python Container that runs the extract and load job.
-- **DBT**: Transformations and build models.
-- Docker Compose: Orchestrated all containers, sets up networking, and defines dependenies between services.
+<img width="895" height="453" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/4c9f1f89-0062-4885-bef7-b58e4d62cf3f" />
+
+### Components
+1. Docker Compose (orchestration)
+   - Single docker-compose.yml defines services: postgres,pgadmin,extractor, and dbt.
+   - Creates an isolated Docker network so containers address each other by their service name.
+   - Host-to-container port mappings: 5333:5432 (Postgres to host), 8091:80 (pgAdmin to host).
+
+2. Postgres container
+   - Offcial Postgres image.
+   - Persistent storage via mounted volume.
+   - Healthcheck uses pg_isready so other services(containers) wait for readiness.
+
+3. pgAdmin container
+   - Optional: UI to explore postgres database
+
+4. Extractor Container
+   - Custom image built.
+   - Depends on postgres
+   - Runs Python script which:
+     - Reads CSV from source
+     - Connects to database
+     - Does a full load
+   - Volume mounts for persistent logs.
+
+5. DBT container
+   - Custom image built.
+   - Depends on extractor with condition: service_completed_succesfully so dbt runs only after extractor exits 0(completes).
+   - Contains Models that does transformation on loaded data.
+   - Produces final summary table
 
 #### Data Flow:
 ``` 
@@ -126,8 +150,11 @@ Once transformations are complete, the result can be visulaized in any BI tool.
 - Country
 - Invoice Date.
 
-
-
+## Troubleshooting checklist
+- Permission denied talking to Docker from WSL: enable Docker Desktop WSL integration.
+- Port already in use: change host mapping
+- Extractor fails on TRUNCATE: use try/except to manage the process.
+- dbt running before extractor is completed: remove old volume every new run.
 
 
 
