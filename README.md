@@ -119,7 +119,7 @@ A bash script is created to run the pipeline automatically every day at 12:00 am
 - Download Ubuntu
 - Activate the environment in your terminal
   ``` bash
-  wsl.exe -d Ubuntu  -- launch ubuntu
+  wsl.exe -d Ubuntu
   ```
 Ensure WSL integration is enbaled in Docker Desktop:
 
